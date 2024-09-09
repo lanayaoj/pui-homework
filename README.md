@@ -1,5 +1,5 @@
 # PUI homework
 
-Deployed website: https://lanayaoj.github.io/pui-homework-template/
+Deployed website: https://lanayaoj.github.io/pui-homework
 
-Repository link: https://github.com/lanayaoj/pui-homework-template
+Repository link: https://github.com/lanayaoj/pui-homework
