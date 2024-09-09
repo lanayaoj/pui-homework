@@ -1,0 +1,102 @@
+/* Makes links black and removes underline */
+a {
+    text-decoration: none;
+    color: black  
+}
+
+/* highlights links when hovered over with mouse */
+a.hover{
+    background-color: yellow;
+}
+
+/* highlights h2 tags and buttons */
+h2:hover, button:hover {
+    background-color: yellow;    
+}
+
+/* highlights product image and details and bolds product name*/
+.product-details:hover, .product-img:hover {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+/* formats h2 tags to be at the center of the page */
+h2 {
+    padding: 5px;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* centers h3 tags */
+h3 {
+    text-align: center;
+}
+
+/* sets logo size */
+#logo {
+    max-width: 400px;
+}
+
+/* formats product image */
+.product-img {
+    max-width: 400px;
+    max-height: 400px;
+    display: block;
+    margin: auto;
+    border: 2px solid black;
+    
+}
+
+/* aligns product details with product image */
+.product-details{
+    padding: 5px;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* formats product image on customization page */
+.item-customization {
+    max-width: 600px;
+    max-height: 600px;
+    display: block;
+    margin: auto;
+    border: 2px solid black;
+}
+
+/* aligns product customizations with product image */
+.customizations, .add-to-cart {
+    padding: 5px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right:auto;
+    text-align: left;
+}
+
+/* aligns cart details with cart images */
+.cart-item {
+    padding: 5px;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* formats cart item images on cart page */
+.cart-img{
+    max-width: 200px;
+    max-height: 200px;
+    display: block;
+    margin: auto;
+    border: 2px solid black;
+}
+
+/* formats the check out button */
+.check-out {
+    padding: 5px;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right:auto;
+    text-align: center;
+}
