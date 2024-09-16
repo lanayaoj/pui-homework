@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+    <link rel="stylesheet" href="../solution-hw2/style.css"/>
+  </head> 
+  
+  <body>
+    
+    <!--Global navigation element-->
+    <nav>
+      <h2><a href="./index.html">PRODUCTS</a></h2>
+      <h2><a href="./cart.html">CART</a></h2>
+    </nav>
+
+    <div class="logo-container">
+      <a href="./products.html">
+        <img id="logo" src="../assets/logo/logo-01.svg" alt="Bun Bun Bake Shop Logo">  
+      </a>   
+
+      <div>
+        <hr>
+        <br>
+        <div class="tagline">
+          <p>Original cinnamon roll</p>
+        </div>
+      </div>
+    </div> 
+
+    <!--Item customization menu-->
+    <div class="custom-container">
+      <div>
+        <img class="item-customization" src="../assets/products/original-cinnamon-roll.jpg" alt="Original Cinnamon Roll"/>
+      </div>
+      <div class="customizations">
+        <p>
+          Customize our delicious hand-made <br>
+          cinnamon roll to your liking!
+        </p>
+        <br>
+
+        <label for="glaze">Glazing:</label>
+        <select name="glaze" id="glaze">
+          <option value="original">Keep original</option>
+          <option value="sugarmilk">Sugar Milk</option>
+          <option value="vanillamilk">Vanilla Milk</option>
+          <option value="doublechocolate">Double Chocolate</option>
+        </select>
+
+        <br>
+
+        <label for="size">Pack size:</label>
+        <select name="size" id="size">
+          <option value="1">1</option>
+          <option value="3">3</option>
+          <option value="6">6</option>
+          <option value="12">12</option>
+        </select>
+
+        <br>
+        <!--Add to cart functionality-->
+        <div class="add-to-cart">
+          <div class = "button">
+            <p>$2.49</p>
+            <button>Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
