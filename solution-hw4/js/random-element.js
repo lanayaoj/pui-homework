@@ -23,12 +23,6 @@ https://www.w3schools.com/jsref/prop_select_selectedindex.asp
 
 /* Compute and update the price on the Product Detail page based on user selections. */
 function displayPrice() { 
-    
-    if (!document.querySelector(".total-price")) {
-        console.error("Total price element not found!");
-        return;
-    }
-
     const glazePrice = parseFloat(glazeSelect.value);
     const packPrice = parseInt(packSelect.value);
     const totalPrice = (currentRoll.basePrice + glazePrice) * packPrice;
@@ -149,16 +143,18 @@ document.querySelector(".item-customization").src = `../assets/products/${curren
 document.querySelector(".total-price").textContent = currentRoll.basePrice.toFixed(2); 
 
 
-// Add to cart button
-function addToCart() {
-    const glazingChoice = glazeSelect.options[glazeSelect.selectedIndex].text; 
-    const packSizeChoice = packSelect.options[packSelect.selectedIndex].text;
-
-    const cartRoll = new Roll(rollType, glazingChoice, packSizeChoice, currentRoll.basePrice);
+function addToCart(){
+    const cartRoll = new Roll(
+        rollType,
+        glazeSelect.options[glazeSelect.selectedIndex].text,
+        packSelect.value,
+        currentRoll.basePrice
+    );
     cart.push(cartRoll);
     console.log(`Cart: Array(${cart.length})`, cart);
+
 }
 
 
-
+// Add event listener to the add to cart button
 document.getElementById("add-btn").addEventListener("click", addToCart);
