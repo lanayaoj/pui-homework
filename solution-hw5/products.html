@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+    <link rel="stylesheet" href="../solution-hw5/style.css"/>
+    <script src="../solution-hw5/js/rollsData.js"></script>
+    <script src="../solution-hw5/js/random-element.js" defer></script>
+    
+  </head> 
+  
+  <body>
+    
+    <!--Global navigation element-->
+    <nav>
+      <h2><a href="./index.html">PRODUCTS</a></h2>
+      <h2><a href="./cart.html">CART</a></h2>
+    </nav>
+
+    <div class="logo-container">
+      <a href="./products.html">
+        <img id="logo" src="../assets/logo/logo-01.svg" alt="Bun Bun Bake Shop Logo">  
+      </a>   
+
+      <div>
+        <hr>
+        <br>
+        <div class="tagline">
+          <p>Original cinnamon roll</p>
+        </div>
+      </div>
+    </div> 
+
+    <!--Item customization menu-->
+    <div class="custom-container">
+      <div>
+        <img class="item-customization" src="../assets/products/original-cinnamon-roll.jpg" alt="Original Cinnamon Roll"/>
+      </div>
+      <div class="customizations">
+        <p>
+          Customize our delicious hand-made <br>
+          cinnamon roll to your liking!
+        </p>
+        <br>
+
+        <label for="glazingOptions">Glazing:</label>
+        <select id="glazingOptions" onchange="glazingChange(this)">
+          
+        </select>
+
+        <br>
+
+        <label for="packOptions">Pack size:</label>
+        <select id="packOptions" onchange="packChange(this)">
+          
+        </select>
+
+        <br>
+        <!--Add to cart functionality-->
+        <div class="add-to-cart">
+          <div class = "button">
+            <p class = "total-price">$<span id="total-price">2.49</span></p>
+            <button id = "add-btn">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
