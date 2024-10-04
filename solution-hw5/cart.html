@@ -32,22 +32,24 @@
 
 
     <!-- Cart item template -->
-    <template id="cart-item-template">
-      <div class="cart-item">
-        <img class="cart-img" src="" alt="">
-        <p class="btn-delete">REMOVE</p>
-        <div class="item-details">
-          <div class="specifications">
-            <p class="roll-type"></p>
-            <p class="roll-glazing"></p>
-            <p class="pack-size"></p>
+      <template id="cart-item-template">
+        <div class="cart-item">
+          <div class="cart-img-container">
+            <img class="cart-img" src="" alt="">
+            <p class="btn-delete">REMOVE</p>
           </div>
-          <div class="price">
-            <p></p>
-          </div>
+            <div class="item-details">
+              <div class="specifications">
+                <p class="roll-type"></p>
+                <p class="roll-glazing"></p>
+                <p class="pack-size"></p>
+              </div>
+              <div class="price">
+                <p></p>
+              </div>
+            </div>
         </div>
-      </div>
-    </template>
+      </template>
     
     <div class="cart">
       <!-- Existing cart items will be added here dynamically using JavaScript -->
@@ -57,11 +59,11 @@
     <!-- Check out functionality that contains total and check-out button -->
     <div class="check-out">
       <hr class="rounded">
-      <div>
+      <div class = "price-container">
         <p>Total: </p>
         <p class = "total-price">$29.94</p>
       </div>
-      <div class = "button">
+      <div class = "chek-out-button">
         <button>Check Out</button>
       </div>
 

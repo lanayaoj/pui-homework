@@ -1,76 +1,70 @@
-/* Resources for css styling of grid for gallery: https://www.w3schools.com/howto/howto_css_images_side_by_side.asp
-*/
+/* Resources for css styling of grid for gallery: https://www.w3schools.com/howto/howto_css_images_side_by_side.asp */
 
 /* Makes links black and removes underline */
 a {
     text-decoration: none;
-    color: black  
+    color: black; /* added missing semicolon */
 }
 
-/* highlights links when hovered over with mouse */
-a.hover{
+/* Highlights links when hovered over with mouse */
+a:hover {
     background-color: yellow;
 }
 
-/* highlights h2 tags and buttons */
+/* Highlights h2 tags and buttons */
 h2:hover, button {
-    background-color: yellow;    
+    background-color: yellow;
 }
 
-/* highlights product image and details and bolds product name*/
+/* Highlights product image and details and bolds product name */
 .product-details:hover, .product-img:hover {
     background-color: yellow;
     font-weight: bold;
 }
 
-
-/* sets logo size */
+/* Sets logo size */
 #logo {
     display: flex;
-    align-items: center; 
+    align-items: center;
     margin-right: 25px;
     width: 400px;
 }
 
-/* formats product image */
+/* Formats product image */
 .product-img {
     max-width: 285px;
     max-height: 285px;
     display: block;
     margin: auto;
     border: 2px solid black;
-    
 }
 
-/* aligns product details with product image */
-.product-details{
-    padding: 5px;
+/* Aligns product details with product image */
+.product-details {
+    padding: 30px;
     max-width: fit-content;
     margin-left: auto;
     margin-right: auto;
-    padding: 30px;
     text-decoration: underline;
 }
 
-
-/* formats product image on customization page */
+/* Formats product image on customization page */
 .item-customization {
     max-width: 600px;
     max-height: 600px;
     border: 2px solid black;
 }
 
-
-
-/* aligns cart details with cart images */
+/* Aligns cart details with cart images */
 .cart-item {
+    display: flex;
     padding: 50px;
     font-weight: bold;
     text-decoration: underline;
 }
 
-/* formats cart item images on cart page */
-.cart-img{
+/* Formats cart item images on cart page */
+.cart-img {
     max-width: 200px;
     max-height: 200px;
     display: block;
@@ -78,47 +72,40 @@ h2:hover, button {
     border: 2px solid black;
 }
 
-
-
 html {
     font-family: Arial, sans-serif;
 }
 
-/* formats the rows of items in a flexbox */
-#row1 {
+/* Formats the rows of items in a flexbox */
+#row1, #row2 {
     display: flex;
     justify-content: space-evenly;
 }
 
-#row2 {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-/* aligns tagline with the logo and solid black line in flexbox */
+/* Aligns tagline with the logo and solid black line in flexbox */
 .tagline {
     text-align: left;
-    font-size: 25px; 
-    padding-left: 25px; 
+    font-size: 25px;
+    padding-left: 25px;
     margin-top: 10px;
 }
 
-/* Flexbox that houses three containers and aligns logo,line, and tagline */
+/* Flexbox that houses three containers and aligns logo, line, and tagline */
 .logo-container {
     display: flex;
     align-items: center;
     padding: 30px;
 }
 
-/* formats solid black line to expand 1200px */
+/* Formats solid black line to expand 1200px */
 hr {
     width: 950px;
-    height:4px;
-    background:#000;
+    height: 4px;
+    background: #000;
 }
 
-/* formats the navigation bar */
-nav { 
+/* Formats the navigation bar */
+nav {
     font-size: 15px;
     position: absolute;
     right: 0;
@@ -127,18 +114,20 @@ nav {
     gap: 100px;
 }
 
-/* formats the flexbox that houses the products into a grid of 3X2 */
-.menu{
+/* Formats the flexbox that houses the products into a grid of 3X2 */
+.menu {
     justify-content: center;
     padding: 20px;
     margin-left: 200px;
 }
-/* flexbox for the product details */
+
+/* Flexbox for the product details */
 .custom-container {
     display: flex;
     justify-content: center;
 }
-/* child flexbox that contains the customizations for the product */
+
+/* Child flexbox that contains the customizations for the product */
 .customizations {
     padding: 50px;
     font-size: 20px;
@@ -147,59 +136,73 @@ nav {
     flex-direction: column;
 }
 
-/* flexbox that allows user to add to cart*/
+/* Flexbox that allows user to add to cart */
 .add-to-cart {
     padding: 30px;
     font-size: 20px;
 }
 
-/* flexbox that contails cart item details*/
-.item-details{
-    display:flex;
-    width:400px
-  }
-  
-  /* price of each item formatting */
-  .price{
+/* Flexbox that contains cart item details */
+.item-details {
+    display: flex;
+    width: 400px;
+}
+
+/* Price of each item formatting */
+.price {
     padding-left: 50px;
     padding-top: 40px;
-  }
+}
 
-/* parent div that formats the cart page  and contains child divs like specifications, total, and check-out*/
-  .cart{
+/* Parent div that formats the cart page and contains child divs like specifications, total, and check-out */
+.cart {
     display: flex;
     justify-content: center;
-    align-items: start; 
+    align-items: start;
     flex-wrap: wrap;
-  }
+}
 
-  .specifications{
+/* Aligns cart image and remove button */
+.cart-img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.specifications {
     align-items: start;
     padding-top: 40px;
     width: 400px;
-  }
+}
 
-  /* flexbox that contains the total price formats so the button is underneath the price */
-.total{
+/* Flexbox that contains the total price and formats so the button is underneath the price */
+.total {
     display: flex;
     justify-content: space-between;
     width: 900px;
 }
-/* button formatting */
-.button{
+
+/* Button formatting */
+.button {
     display: flex;
     justify-content: space-evenly;
 }
 
-.check-out{
+.check-out {
     align-items: center;
     justify-content: space-between;
-    flex-wrap:wrap;
-  }
+    flex-wrap: wrap;
+}
 
- select{
+.btn-delete {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+select {
     width: 300px;
     padding: 5px;
     border-width: 2px;
     border-color: black;
- }
+}

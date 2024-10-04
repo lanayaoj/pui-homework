@@ -12,7 +12,7 @@ class Roll {
         // Define price additions for different glazing options
         const glazingPriceAdjustments = {
             "Keep original": 0.0,
-            "Sugar milk": 0.5,
+            "Sugar milk": 0.0,
             "Vanilla milk": 0.5,
             "Double chocolate": 1.5
         };
@@ -35,9 +35,11 @@ class Roll {
     }
 };
 
-
+/* Set that stores cart items */
 const cartItemSet = new Set();
 
+
+/* Adds a new roll to the Set */
 function addNewRoll(rollType, rollGlazing, packSize, totalPrice){
     const cartRoll = new Roll(rollType, rollGlazing, packSize, totalPrice);
     cartRoll.totalPrice = cartRoll.calculatePrice();
@@ -45,17 +47,10 @@ function addNewRoll(rollType, rollGlazing, packSize, totalPrice){
     return cartRoll;
 }
 
-const cartItemOne = addNewRoll(
+const cartItemFour = addNewRoll(
+    "Apple",
     "Original",
-    "Sugar milk",
-    "1",
-    2.49
-);
-
-const cartItemTwo = addNewRoll(
-    "Walnut",
-    "Vanilla milk",
-    "12",
+    "3",
     3.49
 );
 
@@ -66,13 +61,21 @@ const cartItemThree = addNewRoll(
     2.99
 );
 
-const cartItemFour = addNewRoll(
-    "Apple",
-    "Original",
-    "3",
+const cartItemTwo = addNewRoll(
+    "Walnut",
+    "Vanilla milk",
+    "12",
     3.49
 );
 
+const cartItemOne = addNewRoll(
+    "Original",
+    "Sugar milk",
+    "1",
+    2.49
+);
+
+/* function that takes a Roll instance as an argument, and appends the appropriate DOM elements to the shopping cart page  */
 function createElement(cartRoll){
     const template = document.getElementById("cart-item-template");
     const clone = template.content.cloneNode(true);
@@ -89,8 +92,11 @@ function createElement(cartRoll){
     rollListElement.prepend(cartRoll.element);
 
     updateElement(cartRoll);
+
+    cartTotalPrice();
 };
 
+/* Displays the items on the shopping cart */
 function updateElement(cartRoll){
 
     const rollImageElement = cartRoll.element.querySelector(".cart-img");
@@ -100,17 +106,32 @@ function updateElement(cartRoll){
     const rollPriceElement = cartRoll.element.querySelector(".price");
 
     rollImageElement.src = `../assets/products/${rolls[cartRoll.type].imageFile}`;
-    rollNameElement.textContent = cartRoll.type;
-    rollGlazingElement.textContent = cartRoll.glazing;
-    rollSizeElement.textContent = cartRoll.size;
-    rollPriceElement.textContent = cartRoll.totalPrice.toFixed(2);
+    rollNameElement.textContent = cartRoll.type + " Cinnamon Roll";
+    rollGlazingElement.textContent = "Glazing: " + cartRoll.glazing;
+    rollSizeElement.textContent = "Pack Size: " + cartRoll.size;
+    rollPriceElement.textContent = "$" + cartRoll.totalPrice.toFixed(2);
 }
 
+
+/* Deletes a roll from the cart */
 function deleteRoll(cartRoll){
     cartRoll.element.remove();
     cartItemSet.delete(cartRoll);
+    cartTotalPrice();
 }
 
+/* Calculates the total price of the items in the cart */
+function cartTotalPrice(){
+    let totalPrice = 0;
+    for (const cartRoll of cartItemSet){
+        totalPrice += cartRoll.totalPrice;
+    }
+
+    const totalPriceElement = document.querySelector(".total-price");
+    totalPriceElement.textContent = `$${totalPrice.toFixed(2)}`;
+}
+
+/* Loops through the cartItemSet to create DOM elements */
 for (const cartRoll of cartItemSet){
     console.log(cartRoll);
     createElement(cartRoll);
