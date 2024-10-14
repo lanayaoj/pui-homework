@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8">
+
+  <head>
+    <link rel="stylesheet" href="../solution-hw6/style.css"/>
+    <script src="../solution-hw6/js/rollsData.js"></script>
+    <script src="../solution-hw6/js/add-to-cart.js" defer></script>
+    <title>Cart</title>
+  </head>
+
+  <body>
+   <!--Global navigation element-->
+    <nav>
+      <h2><a href="./index.html">PRODUCTS</a></h2>
+      <h2><a href="./cart.html">CART</a></h2>
+    </nav>
+
+    <div class="logo-container">
+      <a href="./products.html">
+        <img id="logo" src="../assets/logo/logo-01.svg" alt="Bun Bun Bake Shop Logo">  
+      </a>   
+
+      <div>
+        <hr>
+        <br>
+        <div class="tagline">
+          <p>Our hand-made cinnamon rolls</p>
+        </div>
+      </div>
+    </div> 
+
+
+    <!-- Cart item template -->
+      <template id="cart-item-template">
+        <div class="cart-item">
+          <div class="cart-img-container">
+            <img class="cart-img" src="" alt="">
+            <p class="btn-delete">REMOVE</p>
+          </div>
+            <div class="item-details">
+              <div class="specifications">
+                <p class="roll-type"></p>
+                <p class="roll-glazing"></p>
+                <p class="pack-size"></p>
+              </div>
+              <div class="price">
+                <p></p>
+              </div>
+            </div>
+        </div>
+      </template>
+    
+    <div class="cart">
+      <!-- Existing cart items will be added here dynamically using JavaScript -->
+    </div>
+
+
+    <!-- Check out functionality that contains total and check-out button -->
+    <div class="check-out">
+      <hr class="rounded">
+      <div class = "price-container">
+        <p>Total: </p>
+        <p class = "total-price">$29.94</p>
+      </div>
+      <div class = "chek-out-button">
+        <button>Check Out</button>
+      </div>
+
+    </div> 
+
+  </body>
+</html>
