@@ -82,7 +82,7 @@ function cartTotalPrice(){
 /* Loops through the cartItemSet to create DOM elements */
 function updateCartPage() {
     const cartContainer = document.querySelector('.cart');
-    cartContainer.innerHTML = ''; // Clear existing items
+    cartContainer.innerHTML = ''; 
 
     for (const item of cartItemSet) {
         createElement(item);
