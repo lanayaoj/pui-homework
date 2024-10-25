@@ -1,10 +1,13 @@
 <mark>**Note that this document order from FP4 -> FP1**</mark>
 
+<mark>Please sign up for the study</mark> at [https://tinyurl.com/pui-study](https://tinyurl.com/pui-study) to allow us to use your submission to create a better GenAI assistant for designers!
+
+---
+
 # **FP4 \- Final Project Writeup**
 
 Feel free to refer to this [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/) to make your writeup more organized, and you can preview your markdown file in VSCode [Markdown editing with Visual Studio Code](https://code.visualstudio.com/docs/languages/markdown#_markdown-preview). 
 
-Please sign up for the study at [https://tinyurl.com/pui-study](https://tinyurl.com/pui-study) to allow us to use your submission to create a better GenAI assistant for designers!
 
 ## Part 1: Website Description
 
@@ -186,9 +189,7 @@ Outline how you plan to use Generative AI tools to aid in the implementation (\~
 * ChatGPT  
   * I will use it for … because it can help me …  
   * I will not use it for … because it might not be able to help me with …   
-* Gemini  
-* Copilot  
-* V0
+* GitHub Copilot  
 * ...
 
 ### *Responsible Use*
