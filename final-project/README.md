@@ -3,15 +3,15 @@
 ## Idea Sketches
 
 * Idea 1
-![You and The Stars](/Users/lizethanaya/Downloads/MyResume/git/pui-homework-template/final-project/images/you-and-the-stars.png)
+![You and The Stars](images/you-and-the-stars.png)
 This astrology platform features an interactive night sky with clickable constellations for each zodiac sign. Users can immerse themselves in their sign’s constellation to explore personalized traits, compatible crystals, and a tool for checking sign compatibility with friends or partners. The design will be accessible with high contrast, alt text, and keyboard navigation, with thorough research ensuring accurate, engaging insights across all twelve signs.
 
 * Idea 2 
-![Personal Porfolio](/Users/lizethanaya/Downloads/MyResume/git/pui-homework-template/final-project/images/personal-portfolio.png)
+![Personal Porfolio](images/personal-portfolio.png)
 This portfolio site highlights your professional journey, values, and skills for potential employers or collaborators. The homepage offers a clean introduction with a personal tagline, followed by a projects section in a grid layout showcasing your role, outcomes, and visuals. An "About Me" page shares your background and aspirations, while a contact page provides a simple form and social media links. The design will balance aesthetics and functionality for easy navigation, emphasizing key projects in a clear, uncluttered layout.
 
 * Idea 3 
-![Happy Reading](/Users/lizethanaya/Downloads/MyResume/git/pui-homework-template/final-project/images/happy-reading.png)
+![Happy Reading](images/happy-reading.png)
 This book blog invites users to explore interactive reviews and recommendations in a visually engaging bookshelf layout with clickable book covers. Selecting a book opens a review section with your insights, key themes, and tailored recommendations, while interactive features allow filtering by genre or rating. The design will focus on a clean, accessible bookshelf display and subtle interactive elements to enhance engagement without distracting from content.
 
 ## Feedback Summary
