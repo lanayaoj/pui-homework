@@ -1,3 +1,131 @@
+# **FP2 \- Evaluation of the Final project**
+
+## Personal Portfolio
+This project aims to create a personal portfolio website that effectively showcases my professional journey, emphasizing key projects and skills that align with my values and personality to attract potential employers and collaborators. The design will feature a clean homepage introduction, a grid layout for project highlights with detailed roles and outcomes, an engaging "About Me" section, and a straightforward contact page, all while balancing aesthetics and functionality for seamless navigation.
+
+
+## High-Fi Prototypes
+
+### *Prototype 1*
+
+![Portfolio Draft 1](images/prototype-1.png)
+
+A brief description and summary of the user feedback (\<100 words, 2 images) 
+
+### *Prototype 2*
+
+![Portfolio Draft 2](images/prototype-2.png)
+…
+
+## Usability Test
+
+
+For my usability study, I had my evaluators examine and evaluate my personal portfolio by testing my two high-fidelity prototypes. They read through my homepage and navigated to the "About Me" page, providing feedback on the information architecture and layout of information. I also gathered insights on the design aspects, such as colors and overall aesthetics.
+
+The feedback from my evaluators indicated that the website lacked personality and that the footer appeared too plain. They suggested including fun facts about my personal life on the "About Me" page. Additionally, they found the block of text following the hero image and statement overwhelming, recommending that I use that space to capture user attention with images instead.
+
+In response to the feedback, I added a footer that aligns with the overall color scheme and incorporates a smiley face to enhance personality. I also redesigned the "About Me" page to include two columns, adding images on the right side to provide insight into who I am. Furthermore, I reorganized the homepage by removing the dense paragraph to create a more inviting and engaging experience for visitors.
+
+## Updated Designs
+
+Show screenshots of your updated design based on the user feedback (\<100 words, \~2 images).
+
+## Feedback Summary
+
+**Feedback Notes**
+
+---
+
+**Hedy:**
+- Loves the photos, smiley faces, and bright colors; these elements show my personality well.
+- Suggestion: Add a carousel feature for the photos on the About page.
+- Suggestion: Scatter small smiley faces across the page instead of one large smiley face at the bottom.
+- Suggestion: Consider using a gradient background for added visual interest.
+
+**Hannah:**
+- Appreciates that I included feedback from both familiar and unfamiliar perspectives.
+- Thinks my personality is conveyed well through the aura photo and color scheme.
+- Suggestion: The smiley faces at the bottom of the page may be distracting from the project content; consider toning them down or reducing their size.
+- Suggestion: Break up the About page with more visuals, increased white space, and condensed text for better flow.
+- Suggestion: Use a different, more readable typeface on the homepage.
+
+## Milestones
+
+Outline weekly milestones to plan your expected implementation progress until the end of the semester (\~300 words). 
+
+### *Implementation Plan*
+
+- [ ] Week 9 Oct 28 \- Nov 1:
+  - [X] FP1 due
+  
+- [ ] Week 10 Nov 4 \- Nov 8:   
+  - [ ] FP2 due
+
+- [ ] Week 11 Nov 11 \- Nov 15:
+	- [ ] Homepage layout and animation (parallax scrolling)
+- [ ] Week 12 Nov 18 \- Nov 22:
+	- [ ] About page layout and animation (image gallery)
+- [ ] Week 13 Nov 25 \- Nov 29:
+	- [ ] Project page layout and animation (image iframe/pop-up)
+
+  - [ ] Thanksgiving  
+- [ ] Week 14 Dec 2 \- Dec 6:
+	- [ ]  User testing and design iteration 
+  - [ ] FP4 due 
+
+### *Libraries and Other Components*
+
+List the JS libraries and other components (if applicable) that you plan to use. 
+* 
+
+Parallax scrolling resources: 
+Reading:
+https://www.w3schools.com/howto/howto_css_parallax.asp 
+https://www.geeksforgeeks.org/parallax-scrolling-effect-using-css/
+JS Libraries:
+- fullPage
+- Anime.js
+- React JS
+- Lightgallery.js
+- PhotoSwipe
+  
+
+
+## Generative AI Use Plan
+
+With only a few weeks to develop my personal portfolio, I plan to use Generative AI to accelerate my learning and implementation of parallax scrolling and interactive libraries, including fullPage, Anime.js, React JS, Lightgallery.js, and PhotoSwipe. Generative AI will serve as an efficient learning assistant, enabling me to absorb key technical concepts quickly and effectively.
+
+By leveraging Generative AI, I can streamline the process of understanding these libraries and their functionalities. For example, I’ll use AI to pull concise, actionable insights from lengthy documentation and complex tutorials, allowing me to grasp each library’s specific properties, methods, and use cases in a fraction of the usual time. This will give me the foundational knowledge needed to implement dynamic parallax scrolling effects and animations that match my design vision.
+
+Generative AI can also assist with troubleshooting by diagnosing errors and suggesting debugging steps for issues related to library integration or parallax functionality. This support will help me quickly resolve issues, ensuring my focus remains on creating a visually engaging, interactive experience. AI’s optimization tips can also refine my code’s efficiency and responsiveness, which is essential given the animated, image-heavy nature of parallax designs.
+
+### *Tool Use*
+
+ What would you use? Edit the list given your plan. For each tool, explain briefly on what do you expect Generative AI to help you with and what might it not be able to help you with.
+
+* ChatGPT  
+	* I will use it for quickly understanding documentation and exploring library functionalities because it can help me break down complex concepts into manageable explanations and provide tailored examples. This will allow me to learn the essential properties and methods of each library, such as fullPage and Anime.js, more efficiently.
+	* I will not use it to produce code that I don’t fully understand, as my goal is to supplement what I have already learned in my homework assignments. I want to ensure I grasp the logic behind every component rather than relying on AI to generate unfamiliar code.
+
+ 
+* GitHub Copilot
+	* I will use it for generating initial setups and suggesting code patterns because it can help by providing base code structures for common tasks, like setting up parallax backgrounds or adding animations. This will streamline repetitive tasks and speed up code experimentation.
+	* I will not use it for larger projects, as I don’t find it reliable for maintaining code consistency at scale. Copilot tends to lose track of naming conventions and can generate code that doesn’t fully align with my specific project requirements, which can make debugging more difficult. 
+
+* Stack Overflow
+	* I will use these resources for troubleshooting specific code issues and verifying AI-generated code snippets because they provide community-verified solutions and official guidance, helping to ensure the reliability and functionality of my code.
+	* I will not rely on them for time-efficient explanations since sifting through multiple posts and documentation pages can be slower than directly querying AI for concise answers.
+
+### *Responsible Use*
+
+
+To use Generative AI responsibly, I would treat it as a learning and support tool rather than a substitute for my own understanding. My goal is to deepen my skills by supplementing what I’ve already learned in homework assignments, not to rely on AI-generated code I don’t fully understand. This means I will use Generative AI primarily for breaking down complex documentation, exploring new library functions, and gaining insights into how specific tools work—allowing me to understand the underlying logic and apply it thoughtfully.
+
+For coding, I plan to use AI tools like GitHub Copilot selectively for initial setups and simple patterns, but I will take responsibility for checking and modifying any generated code to ensure consistency and alignment with my project requirements. I recognize that Copilot can lose track of naming conventions and produce inconsistent code in larger projects, so I won’t rely on it for more complex implementations. By using AI in this measured way, I can enhance my development process while maintaining control and responsibility over the final output, ensuring it reflects my own learning and understanding.
+
+
+
+
 # FP1 - Proposal for Critique
 
 ## Idea Sketches
