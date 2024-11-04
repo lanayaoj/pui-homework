@@ -6,15 +6,9 @@ This project aims to create a personal portfolio website that effectively showca
 
 ## High-Fi Prototypes
 
-### *Prototype 1*
+### *Prototype 1 and 2 (Home and About)*
 
 ![Portfolio Draft 1](images/prototype-1.png)
-
-
-
-### *Prototype 2*
-
-![Portfolio Draft 2](images/prototype-2.png)
 
 
 ## Usability Test
@@ -28,9 +22,13 @@ In response to the feedback, I added a footer that aligns with the overall color
 
 ## Updated Designs
 
-Show screenshots of your updated design based on the user feedback (\<100 words, \~2 images).
+![Portfolio Draft 2](images/prototype-2.png)
 
 ## Feedback Summary
+
+Both Hedy and Hannah appreciate the personality conveyed through my use of photos, smiley faces, and a bright color scheme, which they feel effectively showcase who I am. Hedy suggests enhancing the About page with a carousel feature for the photos, scattering smaller smiley faces throughout the page instead of a large one at the bottom, and possibly adding a gradient background for visual appeal. Hannah values the inclusion of feedback from people who know me and those who don’t, noting that the aura photo and colors capture my personality well. She suggests reducing the size or prominence of the smiley faces at the bottom to keep the focus on my projects, breaking up the About page with more visuals, increased white space, and condensed text, and choosing a more readable typeface for the homepage.
+
+In response to this feedback, I have decided to implement several updates to my portfolio. I plan to include an image gallery to create a more dynamic and organized display of photos, particularly on the About page. Additionally, I will implement parallax scrolling to add visual interest and depth, enhancing the browsing experience while keeping the focus on key content. I will also adjust the footer to make it less prominent, ensuring it doesn’t detract from the project showcase and other primary elements. These updates will help maintain the personal touches that convey my personality while creating a more streamlined and engaging layout.
 
 **Feedback Notes**
 
@@ -62,16 +60,17 @@ Outline weekly milestones to plan your expected implementation progress until th
   - [ ] FP2 due
 
 - [ ] Week 11 Nov 11 \- Nov 15:
-	- [ ] Homepage layout and animation (parallax scrolling)
+	- [ ] Focus on the homepage layout and implement animations, specifically integrating parallax scrolling. This will involve designing the visual flow and ensuring that the scrolling effect enhances user engagement without overwhelming the content.
 - [ ] Week 12 Nov 18 \- Nov 22:
-	- [ ] About page layout and animation (image gallery)
+	- [ ] Develop the About page layout, incorporating an image gallery and corresponding animations. The goal is to create an organized and visually appealing space that showcases my personality while ensuring the gallery is easy to navigate.
 - [ ] Week 13 Nov 25 \- Nov 29:
-	- [ ] Project page layout and animation (image iframe/pop-up)
+	- [ ] Work on the project page layout, implementing animations that utilize image iframes or pop-ups for a more interactive experience. This week will be crucial for ensuring that visitors can easily access project details without feeling cluttered.
 
   - [ ] Thanksgiving  
 - [ ] Week 14 Dec 2 \- Dec 6:
-	- [ ]  User testing and design iteration 
-  - [ ] FP4 due 
+	- [ ]  Conduct user testing to gather feedback on the website's usability and design elements. This feedback will inform design iterations, ensuring that the final product meets user needs and expectations.
+  - [ ] FP4 due
+ 	 - [ ] incorporate any adjustments based on user testing insights and finalizing the portfolio for submission.
 
 ### *Libraries and Other Components*
 
