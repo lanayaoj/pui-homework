@@ -10,12 +10,12 @@ This project aims to create a personal portfolio website that effectively showca
 
 ![Portfolio Draft 1](images/prototype-1.png)
 
-A brief description and summary of the user feedback (\<100 words, 2 images) 
+
 
 ### *Prototype 2*
 
 ![Portfolio Draft 2](images/prototype-2.png)
-…
+
 
 ## Usability Test
 
