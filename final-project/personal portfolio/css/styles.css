@@ -14,15 +14,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Container  that holds the header */
-.container, .header-container, .header-section, .footer-container {
-    max-width: 100%;
-    width: 100%;
-    padding: 0 20px;
-    box-sizing: border-box;
-}
-
-/* Header Styles */
+/* Styling for the navigation list and website title*/
 header {
     background: black;
     width: 100%;
@@ -37,36 +29,12 @@ header {
 
 .site-name {
     font-family: 'Fredoka One', sans-serif;
-    font-size: 1.5rem;
+    font-size: 24px;
     color: white;
     margin: 0;
 }
 
-.nav-list {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.nav-list li {
-    margin: 0 15px;
-}
-
-.nav-list li a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: background 0.3s, transform 0.3s;
-}
-
-.nav-list li a:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: scale(1.05);
-}
-
-/* Header Section */
+/* Styling for the hero image and animated text */
 .header-section {
     display: flex;
     justify-content: space-between;
@@ -91,30 +59,43 @@ header {
 
 .header-content h1 {
     font-family: 'Fredoka One', sans-serif;
-    font-size: 2.5rem;
+    font-size: 40px;
     margin: 0;
 }
 
 .header-content p {
     font-family: 'Nunito Sans', sans-serif;
-    font-size: 1.2rem;
+    font-size: 19px;
     margin-top: 10px;
 }
 
-/* Animated Text */
-.animated-text {
-    display: inline-block;
-    font-size: 2.5rem;
-    font-family: 'Fredoka One', sans-serif;
-    line-height: 1.2;
-    overflow: hidden;
+.animated-text span {
+    align-content: flex-start;
+    margin-right: 3px;
 }
 
-.animated-text span {
-    display: block;
-    opacity: 0;
-    transform: translateY(50px);
-    margin-bottom: 10px;
+/* Navigation styling for mobile responsiveness */
+.nav-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-list li {
+    margin: 0 15px;
+}
+
+.nav-list li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.nav-list li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
 }
 
 /* Project Section */
@@ -233,7 +214,7 @@ footer {
 .about-statement h2,
 .tab-content h2 {
     font-family: 'Fredoka One', sans-serif;
-    font-size: 2rem;
+    font-size: 32px;
     margin-bottom: 20px;
     color: #ffa0ea;
 }
@@ -241,7 +222,7 @@ footer {
 .about-statement p,
 .tab-content p {
     font-family: 'Nunito Sans', sans-serif;
-    font-size: 1.1rem;
+    font-size: 18px;
     line-height: 1.6;
 }
 
@@ -293,14 +274,14 @@ footer {
 
 /* Resume Content */
 .resume-content {
-    margin-bottom: 2em;
+    margin-bottom: 32px;
     padding-left: 100px;
     padding-right: 100px;
 }
 
 .resume-content h3 {
     font-family: 'Fredoka One', sans-serif;
-    font-size: 2rem;
+    font-size: 32px;
     margin-bottom: 20px;
     color: #ffa0ea;
     font-weight: bold;
@@ -308,7 +289,7 @@ footer {
 
 .resume-content p {
     font-family: 'Nunito Sans', sans-serif;
-    margin-bottom: 2em;
+    margin-bottom: 32px;
     line-height: 1.6;
 }
 
@@ -316,7 +297,7 @@ footer {
 .resume-content ul {
     list-style-type: none;
     padding-left: 0;
-    margin-bottom: 1.5em;
+    margin-bottom: 24px;
 }
 
 .resume-content ul li {
@@ -324,19 +305,19 @@ footer {
     padding-left: 25px;
     position: relative;
     font-family: 'Nunito Sans', sans-serif;
-    font-size: 1rem;
+    font-size: 16px;
 }
 
-/* Download Link */
+/* Resume download button styling */
 .download-link {
     text-align: center;
-    margin-top: 2em;
-    padding: 2em 0;
+    margin-top: 32px;
+    padding: 32px 0;
 }
 
 .download-button {
     display: inline-block;
-    padding: 0.75em 1.5em;
+    padding: 12px 24px;
     background-color: #ffa0ea;
     color: white;
     text-decoration: none;
@@ -354,60 +335,7 @@ footer {
     transform: scale(1);
 }
 
-/* ... (previous styles remain unchanged) ... */
-
-/* Parallax Styles */
-.parallax-container {
-    perspective: 1px;
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-
-.parallax-section {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transform-style: preserve-3d;
-}
-
-.parallax-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-size: cover;
-    background-position: center;
-    transform: translateZ(-1px) scale(2);
-    z-index: -1;
-}
-
-.parallax-content {
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 2rem;
-    border-radius: 10px;
-    max-width: 800px;
-    text-align: center;
-}
-
-.parallax-section h2 {
-    font-family: 'Fredoka One', sans-serif;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    color: #ffa0ea;
-}
-
-.parallax-section p {
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 1.1rem;
-    line-height: 1.6;
-}
-
-/* Gallery Styles */
+/* Gallery styling and function */
 .gallery-section {
     padding: 40px 0;
     text-align: center;
@@ -430,7 +358,7 @@ footer {
 
 .gallery-track {
     display: flex;
-    animation: scroll 60s linear infinite;
+    animation: scroll 10s linear infinite;
 }
 
 .gallery-item {
@@ -447,14 +375,10 @@ footer {
     border-radius: 10px;
 }
 
-
-
 @keyframes scroll {
     0% { transform: translateX(0); }
     100% { transform: translateX(-100%); }
 }
-
-/* ... (media queries remain unchanged) ... */
 
 /* Media Queries */
 @media screen and (max-width: 768px) {
@@ -488,23 +412,15 @@ footer {
     }
 
     .header-content h1 {
-        font-size: 2rem;
+        font-size: 32px;
     }
 
     .header-content p {
-        font-size: 1rem;
+        font-size: 16px;
     }
 
     .header-image {
         margin-bottom: 20px;
-    }
-
-    .parallax-section h2 {
-        font-size: 2rem;
-    }
-
-    .parallax-section p {
-        font-size: 1rem;
     }
 
     .tabs {
