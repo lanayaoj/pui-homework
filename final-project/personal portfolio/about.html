@@ -1,3 +1,14 @@
+<!--
+References for the about.html page: 
+- https://www.w3schools.com/howto/howto_js_tabs.asp
+- https://www.w3schools.com/howto/howto_js_toggle_dark_mode.asp
+- https://www.youtube.com/watch?v=Y4n9bYLjrIE 
+- https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/light-dark 
+- https://gsap.com/docs/v3/Plugins/ScrambleTextPlugin/ 
+- https://gsap.com/docs/v3/Eases/
+- https://www.w3schools.com/css/css_font_google.asp
+--> 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,10 +21,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="texture-overlay"></div>
     <header>
         <div class="header-container">
-            <a href="index.html"><p class="site-name">Lizeth Anaya-Ojeda</p></a>
+            <p class="site-name">Lizeth Anaya-Ojeda</p>
             <nav>
                 <div class="menu-toggle">&#9776;</div>
                 <ul class="nav-list">
@@ -22,12 +32,16 @@
                     <li><a href="resume.html">Resume</a></li>
                 </ul>
             </nav>
+            <!--Button which enables light vs dark mode-->
+            <button class="mode-toggle" id="modeToggle">🌙</button> 
         </div>
     </header>
 
     <section class="header-section">
+        <!-- Image Options for Light vs Dark mode -->
         <div class="header-image">
-            <img src="images/about-me.png" alt="About Me Image" class="header-img">
+            <img src="images/about-me-dark.png" alt="About Me Image" class="header-img dark-mode-img">
+            <img src="images/about-me-light.png" alt="About Me Image" class="header-img light-mode-img">
         </div>
         <div class="header-content">
             <h1>¡Bienvenidos!</h1>
@@ -35,19 +49,14 @@
         </div>
     </section>
 
-
     <section class="about-container">
         <div class="about-statement">
             <h2>What drives me</h2>
-            <p> 🏜️🌞🇲🇽🧡</p> 
-            <p>I grew up in the vast deserts of New Mexico, where the landscape's spiritual energy constantly fuels my creativity. There's a quiet strength in the desert that I carry with me in both my personal and professional life. 
-                My roots trace back to Northern Mexico, and my cultural heritage shapes everything I do, from the way I approach design to how I build connections. 
-                I bring a sense of community, resilience, and authenticity into my work and life.</p>
-            <p> ✨🧚🏼‍♀️🔮🦋 </p>
-            <p>When I'm not busy brainstorming the next big idea, you'll likely find me experimenting with new latte recipes, paddleboarding (or attempting not to faceplant into the water), hitting the gym, or collecting crystals that definitely aren't magical… but I like to think they are. 
-                Balance is key—recharging and having a little fun while staying inspired!</p>
+            <p>🏜️🌞🇲🇽🧡</p>
+            <p>I grew up in the vast deserts of New Mexico, where the landscape's spiritual energy constantly fuels my creativity. There's a quiet strength in the desert that I carry with me in both my personal and professional life. My roots trace back to Northern Mexico, and my cultural heritage shapes everything I do, from the way I approach design to how I build connections. I bring a sense of community, resilience, and authenticity into my work and life.</p>
+            <p>✨🧚🏼‍♀️🔮🦋</p>
+            <p>When I'm not busy brainstorming the next big idea, you'll likely find me experimenting with new latte recipes, paddleboarding (or attempting not to faceplant into the water), hitting the gym, or collecting crystals that definitely aren't magical… but I like to think they are. Balance is key—recharging and having a little fun while staying inspired!</p>
         </div>
-        
         <div class="about-tabs">
             <div class="tabs">
                 <button class="tab-button active" data-tab="why-statement">My "Why"</button>
@@ -57,30 +66,24 @@
             <div class="tab-content active" id="why-statement">
                 <h1>Bridge the Digital Divide</h1>
                 <p>Create accessible technology for everyone, especially marginalized communities. My purpose is to develop solutions that address the unique challenges faced by underrepresented groups, ensuring that technology serves all members of society equally.</p>
-        
                 <h1>Advocate for Representation</h1>
                 <p>Use my personal experience as an Mexican immigrant to champion diversity in tech development. I strive to bring diverse perspectives into the tech industry, ensuring that products and services reflect the needs of all users.</p>
-        
                 <h1>Empower Through Technology</h1>
                 <p>Develop innovative solutions that address real-world challenges faced by underrepresented groups. By creating user-centric technologies, I aim to empower individuals and communities, providing them with tools to overcome barriers and thrive in the digital age.</p>
             </div>
             <div class="tab-content" id="values">
                 <h1>Empathy-Driven Design</h1>
                 <p>Prioritize understanding and addressing user needs in all design processes. By putting myself in the shoes of diverse users, I create solutions that are truly inclusive and effective, ensuring that technology serves everyone's needs.</p>
-        
                 <h1>Collaborative Innovation</h1>
                 <p>Embrace diverse perspectives to create more inclusive and effective solutions. I believe in the power of collaboration and the importance of listening to diverse voices in the design process, leading to more comprehensive and impactful innovations.</p>
-        
                 <h1>Ethical Consideration</h1>
                 <p>Ensure that all technological advancements are guided by moral considerations and social responsibility. I am committed to developing technology that not only solves problems but also upholds ethical standards and contributes positively to society.</p>
             </div>
             <div class="tab-content" id="future-aspirations">
                 <h1>Intuitive Interfaces for Immigrants</h1>
                 <p>Develop user-friendly technologies tailored to immigrant populations. By leveraging my skills in Human-Computer Interaction, I aim to create interfaces that are intuitive and accessible, helping immigrants navigate digital spaces with ease.</p>
-        
                 <h1>Ethical Tech Advocacy</h1>
                 <p>Promote responsible development and use of technology in the industry. I aspire to become a thought leader in ethical technology, shaping policies and practices that ensure the responsible creation and implementation of tech solutions.</p>
-        
                 <h1>Community Empowerment</h1>
                 <p>Leverage HCI skills to create tools that enable diverse communities to thrive in the digital age. My goal is to develop technologies that respect and adapt to diverse cultural contexts, promoting global understanding and cooperation while empowering communities to harness the full potential of technology.</p>
             </div>
@@ -91,24 +94,23 @@
         <h2>Mi Vida en Fotos</h2>
         <div class="gallery-container">
             <div class="gallery-track">
-
-                <div class="gallery-item"><img src="images/gallery-items/gallery-item1.jpg" alt="Lizeth walking down a hallway and looking back at the camera and smiling."></div>
-                <div class="gallery-item"><img src="images/gallery-items/gallery-item2.jpg" alt="Lizeth and siblings in a portrait."></div>
-                <div class="gallery-item"><img src="images/gallery-items/gallery-item3.jpg" alt="Birthday cake with a Twilight portrait on it"></div>
-                <div class="gallery-item"><img src="images/gallery-items/gallery-item4.jpg" alt="Carnegie Mellon University wood made sign"></div>
-                <div class="gallery-item"><img src="images/gallery-items/gallery-item5.jpg" alt="Bright pink Lilly"></div>
-                <div class="gallery-item"><img src="images/gallery-items/gallery-item6.jpg" alt="Mountain view of The Great Divide in Colorado"></div>
-                <div class="gallery-item"><img src="images/gallery-items/gallery-item7.jpg" alt="School of Computer Science wall decoration"></div>
-                <div class="gallery-item"><img src="images/gallery-items/gallery-item8.jpg" alt="Lizeth posing in front of the Forks, Washington Welcome Sign"></div>
-                
-
+                <div class="gallery-item"><img src="images/gallery-items/gallery-item1.jpg" alt="Lizeth walks down a hallway wearing a gray outfit, looking back over her shoulder at the camera with a warm smile."></div>
+                <div class="gallery-item"><img src="images/gallery-items/gallery-item2.jpg" alt="Lizeth poses with her siblings in a staggered portrait arrangement, all smiling together in a family moment."></div>
+                <div class="gallery-item"><img src="images/gallery-items/gallery-item3.jpg" alt="A birthday cake with a Twilight theme, featuring design elements inspired by the iconic book and movie series."></div>
+                <div class="gallery-item"><img src="images/gallery-items/gallery-item4.jpg" alt="A wooden sign with the words 'Carnegie Mellon University' engraved, symbolizing the prestigious institution."></div>
+                <div class="gallery-item"><img src="images/gallery-items/gallery-item5.jpg" alt="A vibrant pink lily flower in full bloom, with delicate petals fanning out gracefully."></div>
+                <div class="gallery-item"><img src="images/gallery-items/gallery-item6.jpg" alt="A scenic view of the Great Divide mountain range in Colorado, showcasing rugged peaks under an expansive sky."></div>
+                <div class="gallery-item"><img src="images/gallery-items/gallery-item7.jpg" alt="A sign at the Gates Hillman Center displaying the School of Computer Science logo, marking the entrance to the building."></div>
+                <div class="gallery-item"><img src="images/gallery-items/gallery-item8.jpg" alt="Lizeth poses in front of the Forks, Washington welcome sign, smiling and commemorating her visit to the iconic Twilight-inspired location."></div>
+                <div class="gallery-item"><img src="images/gallery-items/gallery-item9.jpg" alt="Lizeth poses inside a New York City subway station, capturing the urban energy of the iconic transit system."></div>
+                <div class="gallery-item"><img src="images/gallery-items/gallery-item10.jpg" alt="Lizeth skiing in Northern New Mexico snowy mountain range."></div>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="footer-container">
-            <h1 class="header-text">You've scrolled this far—why not take the next step? Let’s connect on LinkedIn!</h1>
+            <h1 class="header-text">You've scrolled this far—why not take the next step? Let's connect on LinkedIn!</h1>
             <a href="https://www.linkedin.com/in/yourlinkedinprofile" class="linkedin-button">
                 <img src="images/linkedin-icon.png" alt="LinkedIn Icon" class="linkedin-icon" />
                 LinkedIn

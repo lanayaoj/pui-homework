@@ -1,15 +1,34 @@
+<!--
+References: 
+- https://www.w3schools.com/howto/howto_js_tabs.asp
+- https://www.w3schools.com/howto/howto_js_toggle_dark_mode.asp
+- https://www.youtube.com/watch?v=Y4n9bYLjrIE 
+- https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/light-dark 
+- https://gsap.com/docs/v3/Plugins/ScrambleTextPlugin/ 
+- https://gsap.com/docs/v3/Eases/
+- https://www.w3schools.com/css/css_font_google.asp
+- https://www.w3schools.com/css/css_rwd_mediaqueries.asp
+- https://www.w3schools.com/howto/howto_css_image_gallery_scroll.asp
+- https://www.w3schools.com/howto/howto_css_image_overlay_title.asp
+- https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Image_gallery 
+
+PERPLEXITY AI (light vs dark mode): https://www.perplexity.ai/search/i-would-like-to-implement-a-li-h1BPeId3RU.rUY7jvSyy1g
+- Here I asked perplexity AI to help me implement a light and dark mode feature on my website with custom features like a sun and moon emoji. 
+I asked for it to be global and somehting I can transfer to different files. It provided tips on adapting css and html to make it work.
+- I also asked for help implementing the animated text on my header through a GSAP timeline as well as clarity on what it meant use to use timeline().
+--> 
+
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Lizeth Anaya-Ojeda</title>
-        <link rel="icon" type="image/png" href="images/LA-logo.png">
-        <link rel="stylesheet" href="css/styles.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lizeth Anaya-Ojeda</title>
+    <link rel="icon" type="image/png" href="images/LA-logo.png">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script> 
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
 <body>
     <header>
         <div class="header-container">
@@ -22,26 +41,31 @@
                     <li><a href="resume.html">Resume</a></li>
                 </ul>
             </nav>
+            <!--Button which enables light vs dark mode-->
+            <button class="mode-toggle" id="modeToggle">🌙</button> 
         </div>
     </header>
 
     <!-- Header Section with Image -->
     <section class="header-section">
         <div class="header-image">
-            <img src="images/hero-image.png" alt="Header Image" class="header-img">
+            <img src="images/hero-image-dark.png" alt="Hero Image" class="header-img dark-mode-img">
+            <img src="images/hero-image-light.png" alt="Hero Image" class="header-img light-mode-img">
         </div>
         <div class="header-content">
-            <h1 class="animated-text">DESIGNING TECHNOLOGY THAT BRIDGES PEOPLE, PURPOSE AND POSSIBILITY.</h1>
+            <h1 class="animated-text">
+                <span>DESIGNING TECHNOLOGY</span>
+                <span>THAT BRIDGES PEOPLE,</span>
+                <span>PURPOSE AND POSSIBILITY.</span>
+            </h1>
         </div>
     </section>
-    </section>
     
- <!-- Project grid -->
+    <!-- Projects Section -->
     <section class="projects-section">
-        <div class="project" data-project="project1.html" style="background-image: url('images/project-1.png');">
+        <div class="project" data-project="projects/project1.html" style="background-image: url('images/project-1.png');">
             <div class="overlay">
-                <h2><a href="project1.html">Project One</a></h2>
-                <p>A brief description of Project One goes here.</p>
+                <h2><a href="projects/project1.html" class="plain-link">BIAS BINGO</a></h2>
             </div>
         </div>
         <div class="project" data-project="project2.html" style="background-image: url('images/project-2.png');">
@@ -64,19 +88,17 @@
         </div>
     </section>
 
+    <!-- Global Footer with LinkedIn button -->
     <footer>
         <div class="footer-container">
-            <h1 class="header-text">You've scrolled this far—why not take the next step? Let’s connect on LinkedIn!</h1>
+            <h1 class="header-text">You've scrolled this far—why not take the next step? Let's connect on LinkedIn!</h1>
             <a href="https://www.linkedin.com/in/yourlinkedinprofile" class="linkedin-button">
                 <img src="images/linkedin-icon.png" alt="LinkedIn Icon" class="linkedin-icon" />
                 LinkedIn
             </a>
         </div>
     </footer>
-    
-    <!-- Script files for the GSAP libraries and my local script.js -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
-        <script src="js/script.js"></script>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

@@ -1,10 +1,29 @@
-/* Global Styles */
-body {
+/* Global Variables  */
+  :root {
+    --background-color-light: #ffffff;
+    --text-color-light: #000000;
+    --background-color-dark: #000000;
+    --text-color-dark: #ffffff;
+    --primary-accent: #ffa0ea;
+  }
+
+  :root[data-theme="light-mode"] {
+    --background-color: var(--background-color-light);
+    --text-color: var(--text-color-light);
+  }
+
+  :root[data-theme="dark-mode"] {
+    --background-color: var(--background-color-dark);
+    --text-color: var(--text-color-dark);
+  }
+  
+  /* General Styles  */
+  body {
     font-family: 'Nunito Sans', sans-serif;
     margin: 0;
     padding: 0;
-    background: black;
-    color: white;
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -12,103 +31,143 @@ body {
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
-}
-
-/* Styling for the navigation list and website title*/
-header {
-    background: black;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .container, .header-container, .header-section, .footer-container {
+    max-width: 100%;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Header Styles */
+  header {
+    background-color: var(--background-color-dark);
     width: 100%;
     padding: 10px 0;
-}
-
-.header-container {
+    transition: background-color 0.3s;
+  }
+  
+  .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.site-name {
+  }
+  
+  .site-name {
     font-family: 'Fredoka One', sans-serif;
     font-size: 24px;
-    color: white;
-    margin: 0;
-}
-
-/* Styling for the hero image and animated text */
-.header-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.header-image {
-    flex: 1;
-}
-
-.header-img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-.header-content {
-    flex: 1;
-    text-align: left;
-    padding-left: 20px;
-}
-
-.header-content h1 {
-    font-family: 'Fredoka One', sans-serif;
-    font-size: 40px;
-    margin: 0;
-}
-
-.header-content p {
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 19px;
-    margin-top: 10px;
-}
-
-.animated-text span {
-    align-content: flex-start;
-    margin-right: 3px;
-}
-
-/* Navigation styling for mobile responsiveness */
-.nav-list {
+    color: var(--text-color-dark);
+  }
+  
+  .nav-list {
     display: flex;
     list-style: none;
     padding: 0;
-    margin: 0;
-}
-
-.nav-list li {
+  }
+  
+  .nav-list li {
     margin: 0 15px;
-}
-
-.nav-list li a {
-    color: white;
+  }
+  
+  .nav-list li a {
+    color: var(--text-color-dark);
     text-decoration: none;
     padding: 10px 15px;
     border-radius: 5px;
-}
-
-.nav-list li a:hover {
+    transition: background 0.3s, transform 0.3s;
+  }
+  
+  .nav-list li a:hover {
     background: rgba(255, 255, 255, 0.2);
     transform: scale(1.05);
-}
-
-/* Project Section */
-.projects-section {
+  }
+  
+  /* Menu Toggle */
+  .menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--text-color-dark);
+  }
+  
+  /* Mode Toggle Button */
+  .mode-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .mode-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+  }
+  
+  /* Header Section */
+  .header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header-image {
+    flex: 1;
+  }
+  
+  .header-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .header-content {
+    flex: 1;
+    text-align: left;
+    padding-left: 20px;
+  }
+  
+  .header-content h1 {
+    font-family: 'Fredoka One', sans-serif;
+    font-size: 40px;
+  }
+  
+  .header-content p {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 19px;
+    margin-top: 10px;
+  }
+  
+  /* Animated Text */
+  .animated-text {
+    display: inline-block;
+    font-size: 40px;
+    font-family: 'Fredoka One', sans-serif;
+    line-height: 1.2;
+    overflow: hidden;
+  }
+  
+  .animated-text span {
+    display: block;
+    opacity: 0;
+    transform: translateY(50px);
+    margin-bottom: 10px;
+  }
+  
+  /* Project Section */
+  .projects-section {
     display: flex;
     flex-direction: column;
     gap: 20px;
     padding: 20px;
     width: 100%;
-}
-
-/* Project Cards */
-.project {
+  }
+  
+  .project {
     position: relative;
     background-size: cover;
     background-position: center;
@@ -117,14 +176,14 @@ header {
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.project:hover {
+  }
+  
+  .project:hover {
     transform: scale(1.02);
     box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
-}
-
-.project .overlay {
+  }
+  
+  .project .overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -140,110 +199,138 @@ header {
     font-size: 24px;
     font-weight: bold;
     text-align: center;
-}
-
-.project:hover .overlay {
+  }
+  
+  .project:hover .overlay {
     opacity: 1;
-}
+  }
 
-/* Footer styling */
-footer {
+  /* Project Links within the project cards */
+  .plain-link {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .plain-link:visited {
+    color: white;
+  }
+  
+  .plain-link:hover {
+    color: white;
+  }
+  
+  .plain-link:active {
+    color: white;
+  }
+
+  
+  /* Footer Section */
+  footer {
     width: 100%;
-    background-color: black;
+    background-color: var(--background-color-dark);
     padding: 20px 0;
-}
-
-.footer-container {
+    transition: background-color 0.3s;
+  }
+  
+  .footer-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.footer-text {
+  }
+  
+  .footer-text {
     font-size: 16px;
-    color: white;
-}
-
-.linkedin-button {
+    color: var(--text-color-dark);
+  }
+  
+  /* LinkedIn Button */
+  .linkedin-button {
     display: flex;
     align-items: center;
-    background-color: #f775db;
+    background-color: var(--primary-accent);
     color: white;
     padding: 8px 12px;
     border-radius: 4px;
     text-decoration: none;
     font-size: 14px;
-}
-
-.linkedin-button:hover {
+  }
+  
+  .linkedin-button:hover {
     background-color: #dd8acb;
-}
-
-.linkedin-icon {
+  }
+  
+  .linkedin-icon {
     width: 20px;
     height: 20px;
     margin-right: 8px;
-}
-
-/* Hamburger menu icon */
-.menu-toggle {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: white;
-}
-
-.about-container {
+  }
+  
+  /* Light Theme Styles */
+  body.light-mode {
+    --background-color-dark: #ffffff;
+    --text-color-dark: #000000;
+  }
+  
+  body.light-mode header,
+  body.light-mode footer,
+  body.light-mode main {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+  }
+  
+  body.light-mode .site-name,
+  body.light-mode .nav-list li a,
+  body.light-mode .footer-text,
+  body.light-mode .resume-content h3,
+  body.light-mode .resume-content p,
+  body.light-mode .resume-content ul li,
+  body.light-mode .menu-toggle {
+    color: var(--text-color-dark);
+  }
+  
+  body.light-mode .project .overlay {
+    background: rgba(255, 255, 255, 0.5);
+    color: black;
+  }
+  
+  /* About Section */
+  .about-container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     gap: 40px;
     padding: 40px 20px;
-}
-
-.about-statement {
+  }
+  
+  .about-statement,
+  .about-tabs {
     flex: 1;
     max-width: 50%;
-}
-
-.about-tabs {
-    flex: 1;
-    max-width: 50%;
-}
-
-.about-statement h2,
-.tab-content h2 {
+  }
+  
+  .about-statement h2,
+  .tab-content h2 {
     font-family: 'Fredoka One', sans-serif;
     font-size: 32px;
     margin-bottom: 20px;
     color: #ffa0ea;
-}
-
-.about-statement p,
-.tab-content p {
+  }
+  
+  .about-statement p,
+  .tab-content p {
     font-family: 'Nunito Sans', sans-serif;
     font-size: 18px;
     line-height: 1.6;
-}
-
-@media screen and (max-width: 768px) {
-    .about-container {
-        flex-direction: column;
-    }
-
-    .about-statement,
-    .about-tabs {
-        max-width: 100%;
-    }
-}
-
-.tabs {
+  }
+  
+  /* Tabs */
+  .tabs {
     display: flex;
     justify-content: left;
     margin-bottom: 20px;
-}
-
-.tab-button {
+  }
+  
+  .tab-button {
     background-color: #333;
     border: none;
     color: white;
@@ -251,71 +338,102 @@ footer {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s;
-}
-
-.tab-button:hover {
+  }
+  
+  .tab-button:hover {
     background-color: #555;
-}
-
-.tab-button.active {
+  }
+  
+  .tab-button.active {
     background-color: #ffa0ea;
-}
-
-.tab-content {
+  }
+  
+  .tab-content {
     display: none;
     padding: 20px;
     background-color: rgba(255, 160, 234, 0.1);
     border-radius: 10px;
-}
-
-.tab-content.active {
+  }
+  
+  .tab-content.active {
     display: block;
-}
+  }
 
-/* Resume Content */
-.resume-content {
+  /* Project Styling */
+  .centered-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    box-sizing: border-box;
+  }
+
+  .portfolio-img-container {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+  }
+
+  .portfolio-img-content {
+    flex: 2;
+  }
+
+  .portfolio-img-gallery {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .portfolio-img-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  
+  /* Resume Content */
+  .resume-content {
     margin-bottom: 32px;
     padding-left: 100px;
     padding-right: 100px;
-}
-
-.resume-content h3 {
+  }
+  
+  .resume-content h3 {
     font-family: 'Fredoka One', sans-serif;
     font-size: 32px;
     margin-bottom: 20px;
     color: #ffa0ea;
     font-weight: bold;
-}
-
-.resume-content p {
+  }
+  
+  .resume-content p {
     font-family: 'Nunito Sans', sans-serif;
     margin-bottom: 32px;
     line-height: 1.6;
-}
-
-/* List Styling */
-.resume-content ul {
+  }
+  
+  .resume-content ul {
     list-style-type: none;
     padding-left: 0;
     margin-bottom: 24px;
-}
-
-.resume-content ul li {
+  }
+  
+  .resume-content ul li {
     margin-bottom: 15px;
     padding-left: 25px;
     position: relative;
     font-family: 'Nunito Sans', sans-serif;
     font-size: 16px;
-}
-
-/* Resume download button styling */
-.download-link {
+  }
+  
+  /* Download Link */
+  .download-link {
     text-align: center;
     margin-top: 32px;
     padding: 32px 0;
-}
-
-.download-button {
+  }
+  
+  .download-button {
     display: inline-block;
     padding: 12px 24px;
     background-color: #ffa0ea;
@@ -323,113 +441,134 @@ footer {
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s, transform 0.2s ease, box-shadow 0.3s;
-}
-
-.download-button:hover {
+  }
+  
+  .download-button:hover {
     background-color: #f775db;
     transform: scale(1.05);
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-}
-
-.download-button:active {
+  }
+  
+  .download-button:active {
     transform: scale(1);
-}
-
-/* Gallery styling and function */
-.gallery-section {
+  }
+  
+  /* Gallery Styles */
+  .gallery-section {
     padding: 40px 0;
     text-align: center;
-    background: black;
+    background: var(--background-color-dark);
     width: 100%;
-}
-
-.gallery-section h2 {
+    transition: background-color 0.3s;
+  }
+  
+  .gallery-section h2 {
     font-family: 'Fredoka One', sans-serif;
     margin-bottom: 40px;
     font-size: 24px;
     font-weight: bold;
-    color: white;
-}
-
-.gallery-container {
+    color: var(--text-color-dark);
+    transition: color 0.3s;
+  }
+  
+  .gallery-container {
     width: 100%;
     overflow: hidden;
-}
-
-.gallery-track {
+  }
+  
+  .gallery-track {
     display: flex;
-    animation: scroll 10s linear infinite;
-}
-
-.gallery-item {
+    animation: scroll 120s linear infinite;
+  }
+  
+  .gallery-item {
     flex: 0 0 auto;
     width: 300px;
     height: 300px;
     margin: 0 10px;
-}
-
-.gallery-item img {
+  }
+  
+  .gallery-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
-}
-
-@keyframes scroll {
+  }
+  
+  @keyframes scroll {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
-}
-
-/* Media Queries */
-@media screen and (max-width: 768px) {
+    100% { transform: translateX(-10500px); }
+  }
+  
+  /* Media Queries */
+  @media screen and (max-width: 768px) {
     .nav-list {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background: black;
-        padding: 20px 0;
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: var(--background-color-dark);
+      padding: 20px 0;
     }
-
+  
     .nav-list.active {
-        display: flex;
+      display: flex;
     }
-
+  
     .nav-list li {
-        margin: 10px 0;
+      margin: 10px 0;
     }
-
+  
     .menu-toggle {
-        display: block;
+      display: block;
     }
-
+  
     .header-section {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
-
+  
     .header-content h1 {
-        font-size: 32px;
+      font-size: 32px;
     }
-
+  
     .header-content p {
-        font-size: 16px;
+      font-size: 16px;
     }
-
+  
     .header-image {
-        margin-bottom: 20px;
+      margin-bottom: 20px;
+    }
+  
+    .about-container {
+      flex-direction: column;
+    }
+  
+    .about-statement,
+    .about-tabs {
+      max-width: 100%;
+    }
+  
+    .tabs {
+      flex-direction: column;
+    }
+  
+    .tab-button {
+      width: 100%;
+    }
+  
+    .tab-content {
+      padding: 10px;
     }
 
-    .tabs {
+    .portfolio-img-container {
         flex-direction: column;
     }
-    .tab-button {
-        width: 100%;
+    
+    .centered-content {
+        padding: 20px;
     }
-    .tab-content {
-        padding: 10px;
-    }
-}
+  }
