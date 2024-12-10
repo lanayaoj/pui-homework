@@ -3,8 +3,6 @@
 ## PDF OF WAVE TESTING and Web Responsiveness Specifics for Testing
 [Download PDF](PUI-Final-Project.pdf)
 
-Feel free to refer to this [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/) to make your writeup more organized, and you can preview your markdown file in VSCode [Markdown editing with Visual Studio Code](https://code.visualstudio.com/docs/languages/markdown#_markdown-preview). 
-
 
 ## Part 1: Website Description
 
